@@ -3,3 +3,5 @@
 fjdksahfdks
 
 zmiana przez githuba na komputerze
+
+zmiana 3
