@@ -10,4 +10,4 @@ for x in lista:
         suma = suma + x
         print(suma)
 
-test
+test2
