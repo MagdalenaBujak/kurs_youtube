@@ -1,0 +1,17 @@
+liczba1 = int(input("podaj dowolną liczbę: "))
+liczba2 = int(input("podaj dowolną liczbę: "))
+liczba3 = int(input("podaj dowolną liczbę: "))
+liczba4 = int(input("podaj dowolną liczbę: "))
+liczba5 = int(input("podaj dowolną liczbę: "))
+
+lista = []
+lista.append(liczba1)
+lista.append(liczba2)
+lista.append(liczba3)
+lista.append(liczba4)
+lista.append(liczba5)
+print(f"Liczby znajdjące się w liście to: {lista}")
+suma = sum(lista)
+print(f"Suma elementów w liście wynosi: {suma}")
+srednia = sum(lista) / len(lista)
+print(f"Średnia arytmetyczna liczb znajdujących się w liście wynosi: {srednia}")
