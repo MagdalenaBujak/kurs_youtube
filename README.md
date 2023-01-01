@@ -2,4 +2,4 @@
 ## 2 naglowek
 fjdksahfdks
 
-zmiana przez githuba
+zmiana przez githuba na komputerze
