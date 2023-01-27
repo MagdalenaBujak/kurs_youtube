@@ -1,11 +1,25 @@
-import random
+liczba = input("Podaj liczbe: ")
 
-los1 = random.randint(1,10)
-los2 = random.randint(1,10)
+# for i in liczba:
+#     if i == "1":
+#         print("jeden")
+#     elif i == "2":
+#         print("dwa")
+#     elif i == "3":
+#         print("trzy")
+#     elif i == "4":
+#         print("cztery")
+#     elif i == "5":
+#         print("piec")
 
-pytanie = int(input("jaki jest wynik mnożenia wylosowanych libcz?: "))
-odp = los1 * los2
 
-print("odpowiedz użytkownika:", pytanie)
-print("poprawna odpowiedź: ", odp)
+slownik = {
+    "1":"jeden",
+    "2":"dwa",
+    "3":"trzy",
+    "4":"cztery",
+    "5":"piec"
+}
 
+for i in range(len(liczba)):
+    print(slownik[liczba[i]])
