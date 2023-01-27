@@ -1,4 +1,4 @@
-sklep = {"chleb": 3.50, "sok": 6.00, "cukier": 4.25}
+sklep = {"chleb": 3.50, "sok": 6.00, "cukier": 4.27}
 koszyk = {}
 
 while (True):
@@ -62,8 +62,8 @@ while (True):
             if razem >= 10.00:
                 rabat = razem * 0.1
                 kwota = razem - rabat
-                print(f"dostałeś rabat wysokości : {rabat}")
-                print(f"kwota z uwzględnieniem rabatów to: {kwota} PLN")
+                print(f"dostałeś rabat wysokości : {round(rabat,2)}")
+                print(f"kwota z uwzględnieniem rabatów to: {round(kwota,2)} PLN")
             else:
                 print(f"do rabatu brakuje ci jeszcze {10 - razem}")
 

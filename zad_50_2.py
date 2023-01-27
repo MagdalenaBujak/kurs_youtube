@@ -1,3 +1,7 @@
+# brak informacji o dodaniu kontaktu
+# Usuwanie - wyszukac po nazwisku i usunac caly kontakt. plus info o usunieciu
+# Zmiana - informacja o zmianie na koniec + wyszukanie po naziwsku
+
 ksiazka = []
 
 while True:
@@ -7,8 +11,9 @@ while True:
         imie = input("podaj imię: ")
         nazwisko = input("podaj nazwisko: ")
         tel = input("podaj numer telefonu: ")
-        kontakt = [imie,nazwisko,tel]
+        kontakt = [imie, nazwisko, tel]
         ksiazka.append(kontakt)
+        print(f"kontakt: {imie}, {nazwisko}, {tel} został dodany do książki telefonicznej")
         # pytania: imie, nazwisko, telefon
 
 
@@ -19,33 +24,22 @@ while True:
 
 
     if menu == 3:
-        usun = int(input("co chcesz usunąć z listy: 4 - imię, 5- nazwisko, 6 - nr tel: "))
-
-        if usun == 4:
-            imi = input("podaj imie: ")
-            kontakt.remove(imi)
-            print(f"imię {imi} zostało usunięte z książki")
-        elif usun == 5:
-            naz = input("podaj nazwisko: ")
-            kontakt.remove(naz)
-            print(f"nazwisko {naz} zostało usunięte z książki")
-        elif usun == 6:
-             num = input("podaj numer tel:")
-             kontakt.remove(num)
-             print(f"numert tel {num} został usunięty z książki")
-        else:
-            print("błędne dane")
-
-        # pytania: nazwisko
-
+        usun = input("podaj nazwisko które chcesz usunąć: ")
+        for x in ksiazka:
+            if usun == x[1]:
+                ksiazka.remove(x)
+                print(f"{usun} został usunięty z książki telefonicznej")
+            else:
+                print("podałeś niepoprawne dane")
 
     if menu == 4:
-        pytanie = input("wpisz imię które chcesz zmienić:")
+        pytanie = input("wpisz nazwisko, aby edytowac kontakt: :")
         for x in ksiazka:
-            if pytanie == x[0]:
-                x[0] = input("podaj nowe imie: ")
+            if pytanie == x[1]:
                 x[1] = input("podaj nowe nazwisko: ")
+                x[0] = input("podaj nowe imię: ")
                 x[2] = input("podaj nowy nr tel: ")
+                print(f"Dane zostały zaktualizowane na: {x[0]}, {x[1]}, {x[2]}")
             else:
                 print("błędne dane")
 
