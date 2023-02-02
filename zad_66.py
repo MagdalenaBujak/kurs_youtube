@@ -1,8 +1,8 @@
 import random
 
 def dzialania(dane):
-    minimalna = dane
-    maksymalna = dane
+    minimalna = dane[0]
+    maksymalna = dane[0]
     for x in dane:
         if x > maksymalna:
             maksymalna = x

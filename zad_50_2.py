@@ -16,21 +16,21 @@ while True:
         print(f"kontakt: {imie}, {nazwisko}, {tel} został dodany do książki telefonicznej")
         # pytania: imie, nazwisko, telefon
 
-
     if menu == 2:
         for x in ksiazka:
             print(f"imie: {x[0]}, nazwisko: {x[1]}, numer tel: {x[2]}")
         # Imie:  .... Nazwisko: .... Telefon: .....
 
-
     if menu == 3:
         usun = input("podaj nazwisko które chcesz usunąć: ")
+        sprawdzenie = False
         for x in ksiazka:
             if usun == x[1]:
                 ksiazka.remove(x)
                 print(f"{usun} został usunięty z książki telefonicznej")
-            else:
-                print("podałeś niepoprawne dane")
+                sprawdzenie = True
+        if sprawdzenie == False:
+            print("podales niepoprawne dane")
 
     if menu == 4:
         pytanie = input("wpisz nazwisko, aby edytowac kontakt: :")
