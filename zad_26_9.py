@@ -6,13 +6,13 @@ for i in range(10):
     a = random.randint(1, 100)
     lista.append(a)
 
-najmniejsza = 1
-najwieksza = 1
+najmniejsza = 0
+najwieksza = 0
 
 for x in lista:
-    if najmniejsza == 1 or najmniejsza > x:
+    if najmniejsza == 0 or najmniejsza > x:
         najmniejsza = x
-    if najwieksza == 1 or najwieksza < x:
+    if najwieksza == 0 or najwieksza < x:
         najwieksza = x
 
 print(lista)
